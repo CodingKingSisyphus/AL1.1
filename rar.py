@@ -3,19 +3,19 @@ from math import sin, cos, atan2, pi, sqrt
 
 # constantes
 rho = 1.18  # densidade do meio (ar)
-g = 9.81   # aceleração gravítica
+g = 9.81   # aceleraÃ§Ã£o gravÃ­tica
 
-# propriedades do projétil
+# propriedades do projÃ©til
 m = 0.00137   # massa
-Cd_x=0.47   # coefifiente aerodinâmico horizontal
-Cd_y=0.82   # coeficiente aerodinâmico vertical
-A_x=0.000133    # área na vertical (frente)
-A_y=0.001079    # área na horizontal (baixo)
-# velocidade inicial e ângulo (em radianos)
+Cd_x=0.47   # coefifiente aerodinÃ¢mico horizontal
+Cd_y=0.82   # coeficiente aerodinÃ¢mico vertical
+A_x=0.000133    # Ã¡rea na vertical (frente)
+A_y=0.001079    # Ã¡rea na horizontal (baixo)
+# velocidade inicial e Ã¢ngulo (em radianos)
 v = 14.1      # m/s
 theta = 0
 
-# posição inicial
+# posiÃ§Ã£o inicial
 x = 0.
 y = 0.64   # altura inicial
 
@@ -66,13 +66,9 @@ while ((y>0) | (vy>0)):
     
     X.append(x)
     Y.append(y)
-    VX.append(vx)
-    VY.append(vy)
-    V.append(v)
-    T.append(t)
 
 print('Tempo de voo: %.3f sec\n'%t)
-print('Distância total: %.2f m'%X[-1])
+print('DistÃ¢ncia total: %.2f m'%X[-1])
 print('Velocidade horizontal inicial: %.2f m/s'%vx_init)
 print('Velocidade horizontal final: %.2f m/s'%vx)
 plt.figure()
@@ -82,24 +78,3 @@ plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
 
-plt.figure()
-plt.plot(VX,T)
-plt.title('Velocidade horizontal - tempo')
-plt.xlabel('t(s)')
-plt.ylabel('Vx(m/s)')
-plt.show()
-
-
-plt.figure()
-plt.plot(VY,T)
-plt.title('Velocidade vertical - tempo')
-plt.xlabel('t(s)')
-plt.ylabel('Vy(m/s)')
-plt.show()
-
-plt.figure()
-plt.plot(V,T)
-plt.title('Modulo da velocidade - tempo')
-plt.xlabel('t (s)')
-plt.ylabel('v (m/s)')
-plt.show()
