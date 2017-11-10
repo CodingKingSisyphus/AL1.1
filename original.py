@@ -56,10 +56,7 @@ while ((y>0) | (vy>0)):
     X.append(x)
     Y.append(y)
     t = t + dt
-    VX.append(vx)
-    VY.append(vy)
-    V.append(v)
-    T.append(t)
+
 # adjust last point to Y=0 - we may have "overshot":
 ft = Y[-2]/(Y[-2]-Y[-1]) # fractional time to last point
 X[-1] = X[-2] + (X[-1]-X[-2])*ft
@@ -77,16 +74,3 @@ plt.xlabel('X position')
 plt.ylabel('Y position')
 plt.show()
 
-plt.figure()
-plt.plot(VX,T)
-plt.title('Velocidade horizontal - tempo')
-plt.xlabel('t(s)')
-plt.ylabel('Vx(m/s)')
-plt.show()
-
-plt.figure()
-plt.plot(VY,T)
-plt.title('Velocidade vertical - tempo')
-plt.xlabel('t(s)')
-plt.ylabel('Vy(m/s)')
-plt.show()
